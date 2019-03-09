@@ -3,20 +3,14 @@
 {% block freebody %}
 
     <div class="denglu">
-    <form method="post"  method = "post">
-        <div class="ui input" name="username">
-            用户名:
-            <input type="text" placeholder="Username">
-        </div>
-        <div class="ui input"  name="password">
-            密码:
-            <input type="text" placeholder="Password">
-        </div>
-        <button class="ui button">
-            Submit
-        </button>
+        <form method="post">
+            {# 设置scrf_token #}
+            {{ form.csrf_token() }}
+            {{ form.username.label }}{{ form.username }}<br>
+            {{ form.password.label }}{{ form.password }}<br>
+            {{ form.submit }}
 {% if message %} {{message}} {% endif %}
-    </form>f
+        </form>
     </div>
 
 
