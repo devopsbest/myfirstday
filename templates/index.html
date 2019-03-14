@@ -11,7 +11,11 @@
             {{ form.submit }}
 {% if message %} {{message}} {% endif %}
         </form>
+
+    <a href={{ url_for("register")}} >没有账号?</a>
+
     </div>
+
 
 
 {% endblock %}

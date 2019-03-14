@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'showpage' }} {% endblock %}
+{% block freebody %}
+
+    <div class="showpage">
+        {% for user in users %}
+            <li>{{ user.username|e }}</li>
+        {% endfor %}
+
+    </div>
+    {% for v in get_flashed_messages() %}
+        <p style="color:red;">{{ v }}</p>
+    {% endfor %}
+
+
+{% endblock %}
